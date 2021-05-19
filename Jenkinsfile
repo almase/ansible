@@ -1,6 +1,10 @@
 pipeline {
   agent any
-
+  triggers {
+       pollSCM '* * * * *'
+       upstream 'ProbarAgente'
+  }
+  }
   stages {
     stage('compilar') {
       steps {
@@ -17,7 +21,7 @@ pipeline {
     stage('GenerarJAR') {
       steps {
         echo "Estoy  generando el JAR del proyecto"
-        sh './mvnw packae'
+        sh './mvnw package'
              }
       post {
     	     failure {
