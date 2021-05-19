@@ -4,7 +4,7 @@ pipeline {
        pollSCM '* * * * *'
        upstream 'ProbarAgente'
   }
-  }
+  
   stages {
     stage('compilar') {
       steps {
