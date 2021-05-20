@@ -1,0 +1,7 @@
+all:
+  hosts:
+   jenkins:
+   server2:
+   server1:
+   server3:
+   server4:
