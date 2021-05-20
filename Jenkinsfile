@@ -38,7 +38,7 @@ pipeline {
         //sh 'cp target/calculadora-0.0.1-SNAPSHOT.jar /tmp'
         // Ahora como ansible
         //sh 'ansible all -i maquinas -a "cp target/calculadora-0.0.1-SNAPSHOT.jar /tmp/calculadora-0.0.1-SNAPSHOT.jar"'
-        ansiblePlaybook credentialsId: 'bc2e258e-a384-4fa0-b80d-ed0fd4da441c', installation: 'Ansible', playbook: 'p1.yml'
+          ansiblePlaybook credentialsId: 'bc2e258e-a384-4fa0-b80d-ed0fd4da441c', installation: 'Ansible', inventory: 'maquinas', playbook: 'p1.yml'
              }
        }
    }
